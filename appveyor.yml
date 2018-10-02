@@ -62,7 +62,7 @@ matrix:
 
 # scripts that run after cloning repository
 install:
-  - git submodule update --init --recursive
+  - git submodule update --init --recursive --depth 1
   - ps: Start-FileDownload 'https://cran.r-project.org/bin/windows/Rtools/Rtools34.exe' 
   - Rtools34.exe /VERYSILENT /SP- /NORESTART  #TODO: dont download and install if c:\rtools folder exists.
 
